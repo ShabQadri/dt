@@ -32,7 +32,7 @@ AUDIO_FEATURE_ENABLED_LOW_LATENCY_CAPTURE := true
 AUDIO_FEATURE_LOW_LATENCY_PRIMARY := true
 
 # Bluetooth
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/oneplus/bacon/bluetooth
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/bluetooth
 
 # Camera
 HAS_LEGACY_CAMERA_HAL1 := true
@@ -48,30 +48,30 @@ BOARD_USERDATAIMAGE_PARTITION_SIZE := 13271448576
 BOARD_USERDATAEXTRAIMAGE_PARTITION_SIZE := 59914792960
 BOARD_USERDATAEXTRAIMAGE_PARTITION_NAME := 64G
 
-TARGET_FS_CONFIG_GEN := device/oneplus/bacon/config.fs
+TARGET_FS_CONFIG_GEN := $(DEVICE_PATH)/config.fs
 
 # Init
-SOONG_CONFIG_OPPO_MSM8974_INIT_DEVICE_LIB := //device/oneplus/bacon:libinit_bacon
+SOONG_CONFIG_OPPO_MSM8974_INIT_DEVICE_LIB := //$(DEVICE_PATH):libinit_bacon
 
 # Properties
-TARGET_SYSTEM_PROP += device/oneplus/bacon/system.prop
+TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
 
 # Radio
 TARGET_USES_OLD_MNC_FORMAT := true
 
 # Recovery
-TARGET_RECOVERY_FSTAB := device/oneplus/bacon/rootdir/etc/fstab.recovery
+TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.recovery
 
 # SELinux
 BOARD_SEPOLICY_DIRS += \
-    device/oneplus/bacon/sepolicy
+    $(DEVICE_PATH)/sepolicy
 
 # Snapdragon LLVM
 TARGET_USE_SDCLANG := true
 
 # TWRP
 ifeq ($(WITH_TWRP),true)
-TARGET_RECOVERY_DEVICE_DIRS += device/oneplus/bacon/twrp
+TARGET_RECOVERY_DEVICE_DIRS += $(DEVICE_PATH)/twrp
 BOARD_HAS_NO_REAL_SDCARD := true
 RECOVERY_SDCARD_ON_DATA := true
 endif
