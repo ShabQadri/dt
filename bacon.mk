@@ -78,10 +78,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.lineage.build.vendor_security_patch=2016-09-01
 
-TARGET_LD_SHIM_LIBS := \
-    /system/vendor/lib/libqomx_jpegenc.so|libboringssl-compat.so \
-    /system/vendor/lib/libmmqjpeg_codec.so|libboringssl-compat.so
-
 # Call the proprietary setup
 $(call inherit-product, vendor/oneplus/bacon/bacon-vendor.mk)
 
