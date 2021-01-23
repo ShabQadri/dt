@@ -56,9 +56,6 @@ SOONG_CONFIG_OPPO_MSM8974_INIT_DEVICE_LIB := //device/oneplus/bacon:libinit_baco
 # Properties
 TARGET_SYSTEM_PROP += device/oneplus/bacon/system.prop
 
-# Radio
-TARGET_USES_OLD_MNC_FORMAT := true
-
 # Recovery
 TARGET_RECOVERY_FSTAB := device/oneplus/bacon/rootdir/etc/fstab.recovery
 
