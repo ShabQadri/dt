@@ -21,12 +21,15 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, device/oneplus/bacon/bacon.mk)
 
 # Inherit common Colt stuff.
-$(call inherit-product, vendor/colt/config/common_full_phone.mk)
+$(call inherit-product, vendor/rr/config/common_full_phone.mk)
 
 # Boot animation
 TARGET_BOOT_ANIMATION_RES := 1080x1920
 
-PRODUCT_NAME := colt_bacon
+#Face Unlock
+TARGET_FACE_UNLOCK_SUPPORTED := true
+
+PRODUCT_NAME := rr_bacon
 PRODUCT_DEVICE := bacon
 PRODUCT_BRAND := oneplus
 PRODUCT_MANUFACTURER := OnePlus

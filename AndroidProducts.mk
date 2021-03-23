@@ -14,4 +14,4 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/colt_bacon.mk
+    $(LOCAL_DIR)/rr_bacon.mk
